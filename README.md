@@ -1,10 +1,8 @@
 # A3-Interactive-Blacksmith
 A3: Interactive Blacksmith - 26F_MTM6302_020 Web Development with JavaScript - Ashlee Earle
 ____________________________________________________________________________________________
-A3: Interactive Blacksmith
+A3: Interactive Blacksmith - Instructions
 
-Hide Assignment Information
-Instructions
 Your task
 Extend your completed Blacksmith assignment so players can heat the forge, make swords, and reset the game using controls on the webpage. Reuse your existing game functions and add event listeners to connect them to the controls.
 
@@ -33,7 +31,9 @@ Making one sword	Requires at least 30 heat; uses 30 heat and adds one sword.
 Too cold	Heat below 30.
 Ready to forge	Heat from 30 to below 70.
 Roaring fire	Heat from 70 to 100; crafting is still allowed.
+
 Requirements
+
 1. Add heat
 Add a number input with a visible, associated label such as Heat to add.
 Add an Add heat button.
@@ -58,6 +58,7 @@ Restore heat to 20 and swords made to zero.
 Clear the heat input and previous feedback messages. For this assignment, reset should leave the feedback area empty rather than display the Assignment 1 starting message.
 Restore the Too cold status, matching CSS class, image, and alternative text.
 Initialize the page in this same starting state when it loads or refreshes.
+
 4. Connect and update the interface
 Use addEventListener() for the controls. Do not use inline HTML event attributes such as onclick.
 Reuse heatForge(), makeSword(), resetForge(), getForgeStatus(), and updateForge() instead of duplicating the game rules in event handlers.
