@@ -1,0 +1,334 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #212721;
+  background: #f3f6f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+header {
+  padding: 1rem max(1.25rem, calc((100vw - 1080px) / 2));
+  background: #006341;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+header p {
+  margin: 0;
+  font-weight: bold;
+}
+
+header span {
+  font-weight: bold;
+}
+
+main {
+  max-width: 1160px;
+  padding: 2.5rem 1.25rem;
+  margin: auto;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -.04em;
+  margin: .25rem 0 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin: 0 0 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 0 0 .5rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.eyebrow {
+  color: #006341;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-weight: bold;
+  font-size: .875rem;
+  margin-bottom: .5rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.forge {
+  --status-bg: #e4eaf1;
+  --status-ink: #263b50;
+  border: 2px solid #006341;
+  background: white;
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.forge-top {
+  padding: 2rem;
+  background: var(--status-bg);
+  color: var(--status-ink);
+  border-bottom: 1px solid #bdc9c2;
+}
+
+.forge-top .eyebrow {
+  color: inherit;
+}
+
+.forge-top h2 {
+  margin-bottom: 2rem;
+}
+
+#forge-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: contain;
+  margin: -1rem auto 1rem;
+}
+
+.status {
+  font-size: clamp(1.6rem, 4vw, 2.25rem);
+  font-weight: bold;
+  margin: 0;
+}
+
+.readings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.readings p {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: bold;
+  margin: 0;
+}
+
+.unit {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.message-box {
+  margin: 0 2rem 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #bdc9c2;
+}
+
+.message-box p {
+  margin: 0;
+  min-height: 3.2em;
+}
+
+aside {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.panel {
+  padding: 1.5rem;
+  background: white;
+  border: 1px solid #bdc9c2;
+  border-radius: 1rem;
+}
+
+/* These styles place the heat input beside the Add heat button. */
+.heat-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+}
+
+/* Keep the input group from overflowing its panel. */
+.input-group {
+  min-width: 0;
+}
+
+/* Make the heat input label easy to see. */
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: .4rem;
+}
+
+/* Style the number box so it matches the other forge controls. */
+.input-group input {
+  width: 100%;
+  min-height: 3.4rem;
+  padding: .65rem .85rem;
+  border: 2px solid #cbd6d0;
+  border-radius: .55rem;
+  background: white;
+  color: #212721;
+  font: inherit;
+  font-size: 1.2rem;
+}
+
+/* Show a clear outline when the player selects the input. */
+.input-group input:focus {
+  outline: 3px solid rgba(0, 99, 65, .18);
+  border-color: #006341;
+}
+
+/* Give all three controls the same button shape and text style. */
+.button {
+  min-height: 3.4rem;
+  padding: .7rem 1.4rem;
+  border: 2px solid #006341;
+  border-radius: .55rem;
+  font: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+/* Make keyboard focus easy to see when using the buttons. */
+.button:focus-visible {
+  outline: 3px solid #e5a33a;
+  outline-offset: 3px;
+}
+
+/* Use green for the main game actions. */
+.button-primary {
+  background: #00805a;
+  color: white;
+}
+
+.button-primary:hover {
+  background: #006341;
+}
+
+/* Use an outlined style to make Reset look different. */
+.button-secondary {
+  background: white;
+  color: #006341;
+}
+
+.button-secondary:hover {
+  background: #e9f2ec;
+}
+
+/* Make the sword and reset buttons fill the panel width. */
+.button-wide {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+/* Keep the short instructions under each control readable. */
+.help-text {
+  color: #455449;
+  margin: .65rem 0 0;
+  font-size: .95rem;
+}
+
+.rules {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rules li {
+  display: flex;
+  gap: 1rem;
+  padding: .5rem 0;
+}
+
+.rules strong {
+  min-width: 4rem;
+}
+
+.note {
+  font-size: .9rem;
+  margin: 1.25rem 0 0;
+  color: #455449;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: .9rem;
+  color: #455449;
+}
+
+/* updateForge() removes old classes before adding the current status class. */
+.is-cold {
+  --status-bg: #e4eaf1;
+  --status-ink: #263b50;
+}
+
+.is-ready {
+  --status-bg: #d8eee1;
+  --status-ink: #004b31;
+}
+
+.is-roaring {
+  --status-bg: #ffe3b5;
+  --status-ink: #703400;
+}
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding-top: 1.5rem;
+  }
+
+  .forge-top,
+  .readings {
+    padding: 1.5rem;
+  }
+
+  .message-box {
+    margin-inline: 1.5rem;
+  }
+}
+
+/* Stack the input and Add heat button on very small screens. */
+@media (max-width: 430px) {
+  .heat-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .heat-controls .button {
+    width: 100%;
+  }
+
+  .panel {
+    padding: 1.2rem;
+  }
+}
